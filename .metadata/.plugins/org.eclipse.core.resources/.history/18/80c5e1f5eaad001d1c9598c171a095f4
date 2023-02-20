@@ -1,0 +1,23 @@
+/*
+ * pn532.c
+ *
+ *  Created on: Feb 16, 2023
+ *      Author: hoanganh
+ */
+#include "pn532.h"
+#define PN532_PACKBUFFSIZ 64
+static uint8_t pn532_packetbuffer[PN532_PACKBUFFSIZ];
+
+void pn532_begin(SPI_HandleTypeDef *hspi)
+{
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
+
+    HAL_Delay(1000);
+
+    // not exactly sure why but we have to send a dummy command to get synced up
+    pn532_packetbuffer[0] = PN532_COMMAND_GETFIRMWAREVERSION;
+    pn532_sendCommandCheckAck(pn532_packetbuffer, 1, 1000);
+
+    // ignore response!
+
+}

@@ -1,0 +1,21 @@
+18:13:03 **** Incremental Build of configuration Debug for project PN532 ****
+make -j8 all 
+arm-none-eabi-gcc "../User_Lib/pn532.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"/home/hoanganh/STM32CubeIDE/NoiLamViec/PN532/User_Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"User_Lib/pn532.d" -MT"User_Lib/pn532.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "User_Lib/pn532.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"/home/hoanganh/STM32CubeIDE/NoiLamViec/PN532/User_Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../User_Lib/pn532.c:11:6: error: conflicting types for 'pn532_begin'
+   11 | void pn532_begin(void)
+      |      ^~~~~~~~~~~
+In file included from ../User_Lib/pn532.c:7:
+../User_Lib/pn532.h:21:6: note: previous declaration of 'pn532_begin' was here
+   21 | void pn532_begin(SPI_HandleTypeDef *hspi);
+      |      ^~~~~~~~~~~
+../User_Lib/pn532.c: In function 'pn532_begin':
+../User_Lib/pn532.c:19:5: warning: implicit declaration of function 'pn532_sendCommandCheckAck' [-Wimplicit-function-declaration]
+   19 |     pn532_sendCommandCheckAck(pn532_packetbuffer, 1, 1000);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [User_Lib/subdir.mk:19: User_Lib/pn532.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+18:13:04 Build Failed. 3 errors, 1 warnings. (took 271ms)
+
