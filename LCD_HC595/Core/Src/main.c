@@ -137,11 +137,8 @@ void lcd_Send_Data(char data)
 }
 void lcd_Clear(void)
 {
-	lcd_Send_Cmd(0x80);
-	for(int i = 0; i < 100; i++)
-	{
-		lcd_Send_Data(' ');
-	}
+	lcd_Send_Cmd(0x01);
+	HAL_Delay(2);
 }
 void lcd_Put_Cur(int row,int col)
 {
