@@ -58,41 +58,62 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+/*
+ 	 E  -> Q0
+ 	 RS -> Q2
+ 	 D4 -> Q3
+ 	 D5 -> Q4
+ 	 D6 -> Q5
+ 	 D7 -> Q6
+ 	 BL -> Q7
+ 	 LATCH -> Day Trang
+ 	 CLK   -> Day Vang
+ 	 DS	   -> Day Do
+ */
+/* Định nghĩa các chân kết nối từ LCD vào các ngõ ra của IC HC595( D0 <-> 0 ....D7 <-> 7 )*/
+
+/* Các chân điều khiển */
+#define EN_PIN 0	// Chân enable kích hoạt cạnh lên
+#define RS_PIN 2 	// Chân này dùng để xác định dữ liệu gửi vào là dữ liệu hay lệnh ( 0 : lệnh ; 1 : dữ liệu )
+
+/* Các chân truyền dữ liệu */
+#define D4_PIN 3
+#define D5_PIN 4
+#define D6_PIN 5
+#define D7_PIN 6
+
+/* Chân nền */
+#define BL_PIN 7
+
+/* Hàm truyền dữ liệu : Mỗi lần gửi bit từ MSB -> LSB */
 void hc595_trans(uint8_t c)
 {
 	for(int i = 0;i<8;i++)
 	{
-		uint8_t x = c & (0x01<<(7-i));
-
-		if(x)
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, 1);
-		else
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, 0);
-
+		uint8_t bit_trans = (c & (0x80>>i))>>(7-i);
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, bit_trans);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 1);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
 	}
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, 1);
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, 0);
 }
-void lcd_Send_Cmd(char cmd) //Mỗi lần gửi sẽ gửi 4 bit cao xong rồi đến 4 bit thấp
+void lcd_Send_Cmd(char cmd)
 {
+
 	char data_u, data_l; // vi du 0x30
 	uint8_t data_t[4];
-	data_u = (cmd & 0xf0); // data_u = 	0x30
-	data_l = ((cmd << 4) & 0xf0); // data_l = 0x00
-	data_t[0] = data_u | 0x0C; // 0000 1100 | 0011 0000 = 0011 1100 = 0x3C // C và 8 thay đổi bit thứ 6 0 1 nhằm EN
-	data_t[1] = data_u | 0x08; // 0000 1000 | 0011 0000 = 0011 1000 = 0x38
-	data_t[2] = data_l | 0x0C; // 0000 1100 | 0000 0000 = 0000 1100 = 0x0C
-	data_t[3] = data_l | 0x08; // 0000 1000 | 0000 0000 = 0000 1000 = 0x08
+	data_u = (cmd >> 4) & 0x0f; // data_u =0x03
+	data_l = (cmd & 0x0f); // data_l = 0x00
 
+	data_t[0] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (1<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN); // 1000 0000 | 0000 0100 | 0001 1000 = 1001 1100
+	data_t[1] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (0<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN); // 1000 0000 | 0000 0000 | 0001 1000 = 1001 1000
+	data_t[2] = (data_l & 0x01) << D4_PIN | (data_l & 0x02 ) << (D5_PIN-1)  | (data_l & 0x04) << (D6_PIN-2)  | (data_l & 0x08) << (D7_PIN-3) | (1<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN);
+	data_t[3] = (data_l & 0x01) << D4_PIN | (data_l & 0x02 ) << (D5_PIN-1)  | (data_l & 0x04) << (D6_PIN-2)  | (data_l & 0x08) << (D7_PIN-3) | (0<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN);
 	for(int i = 0;i<4;i++)
 	{
 		hc595_trans(data_t[i]);
-		//HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, 1);
-		//HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, 0);
 	}
-	//HAL_I2C_Master_Transmit(&hi2c1, 0x27 << 1,(uint8_t *)data_t, 4, 100);
 }
 void lcd_Send_Data(char data)
 {
@@ -100,11 +121,11 @@ void lcd_Send_Data(char data)
 	uint8_t data_t[4];
 	data_u = (data & 0xf0);
 	data_l = ((data << 4) & 0xf0);
-	data_t[0] = data_u | 0x0D; // 1101
-	data_t[1] = data_u | 0x09; // 1001
-	data_t[2] = data_l | 0x0D;
-	data_t[3] = data_l | 0x09;
 
+	data_t[0] = (data_u >> 1)  | (1<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
+	data_t[1] = (data_u >> 1)  | (0<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
+	data_t[2] = (data_l >> 1)  | (1<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
+	data_t[3] = (data_l >> 1)  | (0<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
 
 	for(int i = 0;i<4;i++)
 	{
@@ -197,12 +218,10 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, 0);
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, 0);
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, 0);
+  int count = 0;
+  char str[20];
+
   lcd_Init();
-  lcd_Put_Cur(0, 0);
-  lcd_Send_String("DCMHC595");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -212,6 +231,20 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	sprintf(str,"DCM T.Thao x%d",count);
+	lcd_Put_Cur(0, 0);
+	lcd_Send_String(str);
+	count++;
+	HAL_Delay(2000);
+	lcd_Clear();
+	HAL_Delay(2000);
+	sprintf(str,"DCM T.Thao x%d",count);
+	lcd_Put_Cur(1, 0);
+	lcd_Send_String(str);
+	count++;
+	HAL_Delay(2000);
+	lcd_Clear();
+	HAL_Delay(2000);
   }
   /* USER CODE END 3 */
 }
