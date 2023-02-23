@@ -106,8 +106,8 @@ void lcd_Send_Cmd(char cmd)
 	data_u = (cmd >> 4) & 0x0f; // data_u =0x03
 	data_l = (cmd & 0x0f); // data_l = 0x00
 
-	data_t[0] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (1<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN); // 1000 0000 | 0000 0100 | 0001 1000 = 1001 1100
-	data_t[1] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (0<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN); // 1000 0000 | 0000 0000 | 0001 1000 = 1001 1000
+	data_t[0] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (1<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN);
+	data_t[1] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (0<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN);
 	data_t[2] = (data_l & 0x01) << D4_PIN | (data_l & 0x02 ) << (D5_PIN-1)  | (data_l & 0x04) << (D6_PIN-2)  | (data_l & 0x08) << (D7_PIN-3) | (1<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN);
 	data_t[3] = (data_l & 0x01) << D4_PIN | (data_l & 0x02 ) << (D5_PIN-1)  | (data_l & 0x04) << (D6_PIN-2)  | (data_l & 0x08) << (D7_PIN-3) | (0<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN);
 	for(int i = 0;i<4;i++)
@@ -119,13 +119,12 @@ void lcd_Send_Data(char data)
 {
 	char data_u,data_l;
 	uint8_t data_t[4];
-	data_u = (data & 0xf0);
-	data_l = ((data << 4) & 0xf0);
+	data_u = (data >> 4) & 0x0f;
+	data_l = (data & 0x0f);
 
-	data_t[0] = (data_u >> 1)  | (1<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
-	data_t[1] = (data_u >> 1)  | (0<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
-	data_t[2] = (data_l >> 1)  | (1<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
-	data_t[3] = (data_l >> 1)  | (0<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
+	data_t[0] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (1<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
+	data_t[2] = (data_l & 0x01) << D4_PIN | (data_l & 0x02 ) << (D5_PIN-1)  | (data_l & 0x04) << (D6_PIN-2)  | (data_l & 0x08) << (D7_PIN-3) | (1<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
+	data_t[3] = (data_l & 0x01) << D4_PIN | (data_l & 0x02 ) << (D5_PIN-1)  | (data_l & 0x04) << (D6_PIN-2)  | (data_l & 0x08) << (D7_PIN-3) | (0<<EN_PIN)| (1<<RS_PIN)  | (1<< BL_PIN);
 
 	for(int i = 0;i<4;i++)
 	{

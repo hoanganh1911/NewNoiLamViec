@@ -3045,3 +3045,924 @@ java.io.FileNotFoundException: /home/hoanganh/STM32CubeIDE/NoiLamViec/LCD_HC595/
 
 !ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-02-21 21:21:07.995
 !MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2023-02-21 22:09:58.488
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: /home/hoanganh/STM32CubeIDE/NoiLamViec/LCD_HC595/Debug/LCD_HC595.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:326)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2023-02-21 22:09:58.488
+!MESSAGE /home/hoanganh/STM32CubeIDE/NoiLamViec/LCD_HC595/Debug/LCD_HC595.elf not found
+!STACK 0
+java.io.FileNotFoundException: /home/hoanganh/STM32CubeIDE/NoiLamViec/LCD_HC595/Debug/LCD_HC595.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:326)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2023-02-21 22:10:16.788
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: /home/hoanganh/STM32CubeIDE/NoiLamViec/LCD_HC595/Debug/LCD_HC595.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:326)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2023-02-21 22:10:16.788
+!MESSAGE /home/hoanganh/STM32CubeIDE/NoiLamViec/LCD_HC595/Debug/LCD_HC595.elf not found
+!STACK 0
+java.io.FileNotFoundException: /home/hoanganh/STM32CubeIDE/NoiLamViec/LCD_HC595/Debug/LCD_HC595.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:326)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-02-21 22:10:30.971
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 171 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-02-21 22:10:30.971
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-02-21 22:10:30.971
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 171 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-02-21 22:10:30.971
+!MESSAGE Existing sessions are:
+!SESSION 2023-02-23 13:07:46.974 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-02-23 13:07:52.531
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-02-23 13:07:52.591
+!MESSAGE Log4j initialized with config file /home/hoanganh/STM32CubeIDE/NoiLamViec/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-23 13:07:58.233
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-02-23 13:27:46.212
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+target remote localhost:61234
+
+Error message from debugger back end:
+localhost:61234: Connection timed out.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target remote localhost:61234
+
+Error message from debugger back end:
+localhost:61234: Connection timed out.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:326)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: localhost:61234: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-02-23 13:27:46.213
+!MESSAGE Failed to execute MI command:
+target remote localhost:61234
+
+Error message from debugger back end:
+localhost:61234: Connection timed out.
+!STACK 0
+java.lang.Exception: localhost:61234: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.ui 4 4 2023-02-23 13:36:45.435
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1319/0x0000000101698840@39470043, thread Worker-41: Launching Encoder Debug will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2023-02-23 13:36:45.435
+!MESSAGE Worker-41: Launching Encoder Debug thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-41: Launching Encoder Debug
+	at java.management@11.0.16/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@11.0.16/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:485)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:6012)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.handleStatus(Prompter.java:81)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.saveBeforeLaunch(LaunchConfigurationDelegate.java:245)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.preLaunchCheck(LaunchConfigurationDelegate.java:197)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.preLaunchCheck(GdbLaunchDelegate.java:371)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:205)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:767)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2023-02-23 13:36:45.436
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_iteration_do(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4578)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.showSaveDialog(SaveScopeResourcesHandler.java:250)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:180)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1319/0x0000000101698840.run(Unknown Source)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UILockListener.aboutToWait(UILockListener.java:139)
+	at org.eclipse.core.internal.jobs.LockManager.aboutToWait(LockManager.java:109)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:922)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:344)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:531)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.disconnectTerminal(VT100TerminalControl.java:454)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.disposeTerminal(VT100TerminalControl.java:400)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbFullCliConsolePage.dispose(GdbFullCliConsolePage.java:125)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView.doDestroyPage(DebuggerConsoleView.java:304)
+	at org.eclipse.ui.part.PageBookView.removePage(PageBookView.java:810)
+	at org.eclipse.ui.part.PageBookView.partClosed(PageBookView.java:743)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView.lambda$1(DebuggerConsoleView.java:375)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView$$Lambda$1498/0x00000001018e3440.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4584)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.ui.internal.Workbench$$Lambda$134/0x000000010032b840.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base@11.0.16/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.16/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.16/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.16/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at app//org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 4 2023-02-23 13:36:46.576
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1319/0x0000000101698840@39470043, thread Worker-41: Launching Encoder Debug will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2023-02-23 13:36:46.576
+!MESSAGE Worker-41: Launching Encoder Debug thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-41: Launching Encoder Debug
+	at java.management@11.0.16/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@11.0.16/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:485)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:6012)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.handleStatus(Prompter.java:81)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.saveBeforeLaunch(LaunchConfigurationDelegate.java:245)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.preLaunchCheck(LaunchConfigurationDelegate.java:197)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.preLaunchCheck(GdbLaunchDelegate.java:371)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:205)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:767)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2023-02-23 13:36:46.576
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at org.eclipse.swt.internal.gtk.OS.Call(Native Method)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:5700)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:824)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.showSaveDialog(SaveScopeResourcesHandler.java:250)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:180)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1319/0x0000000101698840.run(Unknown Source)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UILockListener.aboutToWait(UILockListener.java:139)
+	at org.eclipse.core.internal.jobs.LockManager.aboutToWait(LockManager.java:109)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:922)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:344)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:531)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.disconnectTerminal(VT100TerminalControl.java:454)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.disposeTerminal(VT100TerminalControl.java:400)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbFullCliConsolePage.dispose(GdbFullCliConsolePage.java:125)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView.doDestroyPage(DebuggerConsoleView.java:304)
+	at org.eclipse.ui.part.PageBookView.removePage(PageBookView.java:810)
+	at org.eclipse.ui.part.PageBookView.partClosed(PageBookView.java:743)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView.lambda$1(DebuggerConsoleView.java:375)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView$$Lambda$1498/0x00000001018e3440.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4584)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.ui.internal.Workbench$$Lambda$134/0x000000010032b840.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base@11.0.16/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.16/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.16/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.16/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at app//org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 4 2023-02-23 13:53:19.047
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: com.st.stm32cube.ide.mcu.debug.stlinkfwutil.StLinkFwUtil$$Lambda$1626/0x0000000100173440@149334dd, thread Worker-54: Launching Encoder Debug will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2023-02-23 13:53:19.047
+!MESSAGE Worker-54: Launching Encoder Debug thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-54: Launching Encoder Debug
+	at java.management@11.0.16/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@11.0.16/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:485)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:6012)
+	at com.st.stm32cube.ide.common.utils.ThreadHelper.runInUiThreadSync(ThreadHelper.java:37)
+	at com.st.stm32cube.ide.mcu.debug.stlinkfwutil.StLinkFwUtil.lookupStLink(StLinkFwUtil.java:296)
+	at com.st.stm32cube.ide.mcu.debug.stlinkfwutil.StLinkFwUtil.validate(StLinkFwUtil.java:110)
+	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.preLaunchCheck(StLinkDebugHardware.java:247)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:161)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:767)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2023-02-23 13:53:19.047
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at org.eclipse.swt.internal.gtk.GTK.gtk_widget_get_allocation(Native Method)
+	at org.eclipse.swt.widgets.Composite.gtk_draw(Composite.java:487)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2389)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6834)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6210)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_do_event(Native Method)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1565)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_iteration_do(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4578)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:394)
+	at org.eclipse.jface.dialogs.MessageDialog.openInformation(MessageDialog.java:491)
+	at com.st.stm32cube.ide.mcu.debug.stlinkfwutil.StLinkFwUtil.lambda$6(StLinkFwUtil.java:297)
+	at com.st.stm32cube.ide.mcu.debug.stlinkfwutil.StLinkFwUtil$$Lambda$1626/0x0000000100173440.run(Unknown Source)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UILockListener.aboutToWait(UILockListener.java:139)
+	at org.eclipse.core.internal.jobs.LockManager.aboutToWait(LockManager.java:109)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:922)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:344)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:531)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.disconnectTerminal(VT100TerminalControl.java:454)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.disposeTerminal(VT100TerminalControl.java:400)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbFullCliConsolePage.dispose(GdbFullCliConsolePage.java:125)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView.doDestroyPage(DebuggerConsoleView.java:304)
+	at org.eclipse.ui.part.PageBookView.removePage(PageBookView.java:810)
+	at org.eclipse.ui.part.PageBookView.partClosed(PageBookView.java:743)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView.lambda$1(DebuggerConsoleView.java:375)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView$$Lambda$1498/0x00000001018e3440.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4584)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.ui.internal.Workbench$$Lambda$134/0x000000010032b840.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base@11.0.16/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.16/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.16/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.16/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at app//org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.core.resources 4 566 2023-02-23 17:29:05.226
+!MESSAGE Workspace was not properly initialized or has already shutdown.
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-02-23 17:29:05.581
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob
+!SESSION 2023-02-23 17:29:06.403 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-02-23 17:29:11.750
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-02-23 17:29:11.833
+!MESSAGE Log4j initialized with config file /home/hoanganh/STM32CubeIDE/NoiLamViec/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-23 17:29:18.520
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-02-23 17:34:54.828 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data file:/home/hoanganh/STM32CubeIDE/NoiLamViec/ -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2023-02-23 17:34:56.962
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.cdtserial [409]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+              org.eclipse.tm.terminal.view.core [415]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.local 4 0 2023-02-23 17:34:56.964
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.local [410]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.connector.process; bundle-version="4.5.0"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.connector.process; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.connector.process [411]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+              org.eclipse.tm.terminal.view.ui [416]
+                Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+                Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.process 4 0 2023-02-23 17:34:56.964
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.process [411]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.remote 4 0 2023-02-23 17:34:56.966
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.remote [412]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.ssh 4 0 2023-02-23 17:34:56.968
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.ssh [413]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.telnet 4 0 2023-02-23 17:34:56.969
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.telnet [414]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.view.core 4 0 2023-02-23 17:34:56.971
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.view.core [415]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.view.ui 4 0 2023-02-23 17:34:56.972
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.view.ui [416]
+  Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-02-23 17:34:59.773
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-02-23 17:34:59.838
+!MESSAGE Log4j initialized with config file /home/hoanganh/STM32CubeIDE/NoiLamViec/.metadata/.log4j.xml
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 17:35:02.300
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.tm.terminal.view.ui.TerminalsView" id and the "Terminal" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 17:35:02.301
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.tcf.te.ui.terminals.TerminalsView" id and the "Terminals (Old)" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-23 17:35:04.668
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-02-23 18:47:44.953 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2023-02-23 18:47:46.075
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.cdtserial [409]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.local 4 0 2023-02-23 18:47:46.077
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.local [410]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.connector.process; bundle-version="4.5.0"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.connector.process; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.connector.process [411]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.process 4 0 2023-02-23 18:47:46.078
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.process [411]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+              org.eclipse.tm.terminal.view.core [415]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.remote 4 0 2023-02-23 18:47:46.080
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.remote [412]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+              org.eclipse.tm.terminal.view.core [415]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.ssh 4 0 2023-02-23 18:47:46.081
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.ssh [413]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.connector.telnet 4 0 2023-02-23 18:47:46.083
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.connector.telnet [414]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.ui; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.ui; bundle-version="4.11.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.ui [416]
+         Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+              org.eclipse.tm.terminal.view.core [415]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="4.5.0"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.view.core 4 0 2023-02-23 18:47:46.085
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.view.core [415]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.tm.terminal.view.ui 4 0 2023-02-23 18:47:46.087
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.tm.terminal.view.ui [416]
+  Unresolved requirement: Require-Bundle: org.eclipse.egit.ui; bundle-version="2.0.0"; resolution:="optional"
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.tm.terminal.view.core; bundle-version="[4.8.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.tm.terminal.view.core; bundle-version="4.9.0.202211062329"; singleton:="true"
+       org.eclipse.tm.terminal.view.core [415]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-02-23 18:47:49.060
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-02-23 18:47:49.129
+!MESSAGE Log4j initialized with config file /home/hoanganh/STM32CubeIDE/NoiLamViec/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-23 18:47:54.563
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.ui 4 4 2023-02-23 19:08:33.766
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1089/0x0000000100ea9440@6f2aeb34, thread Worker-30: Launching Encoder Debug will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2023-02-23 19:08:33.766
+!MESSAGE Worker-30: Launching Encoder Debug thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-30: Launching Encoder Debug
+	at java.management@11.0.16/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@11.0.16/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:485)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:6012)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.handleStatus(Prompter.java:81)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.saveBeforeLaunch(LaunchConfigurationDelegate.java:245)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.preLaunchCheck(LaunchConfigurationDelegate.java:197)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.preLaunchCheck(GdbLaunchDelegate.java:371)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:205)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:767)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2023-02-23 19:08:33.766
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at org.eclipse.swt.internal.gtk.OS.Call(Native Method)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:5700)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:824)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.showSaveDialog(SaveScopeResourcesHandler.java:250)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:180)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1089/0x0000000100ea9440.run(Unknown Source)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UILockListener.aboutToWait(UILockListener.java:139)
+	at org.eclipse.core.internal.jobs.LockManager.aboutToWait(LockManager.java:109)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:922)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:344)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:531)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.disconnectTerminal(VT100TerminalControl.java:454)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.disposeTerminal(VT100TerminalControl.java:400)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbFullCliConsolePage.dispose(GdbFullCliConsolePage.java:125)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView.doDestroyPage(DebuggerConsoleView.java:304)
+	at org.eclipse.ui.part.PageBookView.removePage(PageBookView.java:810)
+	at org.eclipse.ui.part.PageBookView.partClosed(PageBookView.java:743)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView.lambda$1(DebuggerConsoleView.java:375)
+	at org.eclipse.cdt.debug.internal.ui.views.debuggerconsole.DebuggerConsoleView$$Lambda$1275/0x0000000101112440.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4584)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.ui.internal.Workbench$$Lambda$124/0x0000000100332040.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base@11.0.16/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.16/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.16/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.16/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at app//org.eclipse.equinox.launcher.Main.main(Main.java:1440)
