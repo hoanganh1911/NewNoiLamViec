@@ -73,10 +73,6 @@ void Error_Handler(void);
 #define NFC_SSB15_GPIO_Port GPIOB
 #define RS485_DERE_Pin GPIO_PIN_5
 #define RS485_DERE_GPIO_Port GPIOB
-#define TTP229_SCL_Pin GPIO_PIN_8
-#define TTP229_SCL_GPIO_Port GPIOB
-#define TTP229_SDO_Pin GPIO_PIN_9
-#define TTP229_SDO_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

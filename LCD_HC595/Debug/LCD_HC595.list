@@ -165,7 +165,7 @@ void lcd_Send_Cmd(char cmd)
  80001de:	f003 030f 	and.w	r3, r3, #15
  80001e2:	74bb      	strb	r3, [r7, #18]
 
-	data_t[0] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (1<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN); // 1000 0000 | 0000 0100 | 0001 1000 = 1001 1100
+	data_t[0] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (1<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN);
  80001e4:	7cfb      	ldrb	r3, [r7, #19]
  80001e6:	00db      	lsls	r3, r3, #3
  80001e8:	b25b      	sxtb	r3, r3
@@ -175,7 +175,7 @@ void lcd_Send_Cmd(char cmd)
  80001f4:	b25b      	sxtb	r3, r3
  80001f6:	b2db      	uxtb	r3, r3
  80001f8:	733b      	strb	r3, [r7, #12]
-	data_t[1] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (0<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN); // 1000 0000 | 0000 0000 | 0001 1000 = 1001 1000
+	data_t[1] = (data_u & 0x01) << D4_PIN | (data_u & 0x02 ) << (D5_PIN-1)  | (data_u & 0x04) << (D6_PIN-2)  | (data_u & 0x08) << (D7_PIN-3) | (0<<EN_PIN)| (0<<RS_PIN)  | (1<< BL_PIN);
  80001fa:	7cfb      	ldrb	r3, [r7, #19]
  80001fc:	00db      	lsls	r3, r3, #3
  80001fe:	b25b      	sxtb	r3, r3
