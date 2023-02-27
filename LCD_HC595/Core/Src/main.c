@@ -59,7 +59,14 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+hc595_t conf = {
+	.CLK_Port = Clock_GPIO_Port,
+	.CLK_Pin = Clock_Pin,
+	.LATCH_Port = Latch_GPIO_Port,
+	.LATCH_Pin = Latch_Pin,
+	.DATA_Port = Data_GPIO_Port,
+	.DATA_Pin = Data_Pin,
+};
 /* USER CODE END 0 */
 
 /**
@@ -92,7 +99,7 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  hc595_int(CLK_GPIO_Port,CLK_Pin,DATA_GPIO_Port, DATA_Pin, LATCH_GPIO_Port, LATCH_Pin);
+  hc595_int(&conf);
   lcd_Init();
   /* USER CODE END 2 */
 
@@ -196,10 +203,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, CLK_Pin|LATCH_Pin|DATA_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, Clock_Pin|Latch_Pin|Data_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : CLK_Pin LATCH_Pin DATA_Pin */
-  GPIO_InitStruct.Pin = CLK_Pin|LATCH_Pin|DATA_Pin;
+  /*Configure GPIO pins : Clock_Pin Latch_Pin Data_Pin */
+  GPIO_InitStruct.Pin = Clock_Pin|Latch_Pin|Data_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;

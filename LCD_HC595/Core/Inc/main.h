@@ -57,12 +57,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define CLK_Pin GPIO_PIN_11
-#define CLK_GPIO_Port GPIOA
-#define LATCH_Pin GPIO_PIN_12
-#define LATCH_GPIO_Port GPIOA
-#define DATA_Pin GPIO_PIN_15
-#define DATA_GPIO_Port GPIOA
+#define Clock_Pin GPIO_PIN_11
+#define Clock_GPIO_Port GPIOA
+#define Latch_Pin GPIO_PIN_12
+#define Latch_GPIO_Port GPIOA
+#define Data_Pin GPIO_PIN_15
+#define Data_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

@@ -1,4 +1,4 @@
-20:13:07 **** Incremental Build of configuration Debug for project Encoder_INT ****
+14:24:05 **** Incremental Build of configuration Debug for project Encoder_INT ****
 make -j8 all 
 arm-none-eabi-size   Encoder_INT.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   Encoder_INT.elf
 Finished building: default.size.stdout
  
 
-20:13:07 Build Finished. 0 errors, 0 warnings. (took 194ms)
+14:24:06 Build Finished. 0 errors, 0 warnings. (took 181ms)
 
