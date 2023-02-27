@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LCD_HC595/User_Lib/lcd16x2_hc595_screw&apos; to &apos;lcd16x2_hc595_screw.h&apos;" description="Rename resource &apos;lcd16x2_hc595_screw&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="User_Lib/lcd16x2_hc595_screw" name="lcd16x2_hc595_screw.h" stamp="1677470624938" updateReferences="true"/>
+</session>

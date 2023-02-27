@@ -1,0 +1,10 @@
+../User_Libs/lcd_screw.c:17:6:hc595_int	24	static
+../User_Libs/lcd_screw.c:26:6:hc595_trans	24	static
+../User_Libs/lcd_screw.c:38:6:lcd_Send_Cmd	32	static
+../User_Libs/lcd_screw.c:55:6:lcd_Send_Data	32	static
+../User_Libs/lcd_screw.c:74:6:lcd_Clear	8	static
+../User_Libs/lcd_screw.c:79:6:lcd_Put_Cur	16	static
+../User_Libs/lcd_screw.c:94:6:lcd_Init	8	static
+../User_Libs/lcd_screw.c:119:6:lcd_Send_String	16	static
+../User_Libs/lcd_screw.c:123:6:screw_Done_Show	120	static
+../User_Libs/lcd_screw.c:130:6:screw_Set_Show	120	static

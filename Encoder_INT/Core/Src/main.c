@@ -57,8 +57,10 @@ static void MX_TIM2_Init(void);
 /* USER CODE BEGIN 0 */
 volatile bool turnedCW = false;
 volatile bool turnedCCW = false;
-bool checkturnedCW = false;
-bool checkturnedCCW = false;
+
+volatile bool checkturnedCW = false;
+volatile bool checkturnedCCW = false;
+
 static int value = 0;
 void Delay_us(uint16_t t)
 {
@@ -72,18 +74,13 @@ void Delay_ms(uint32_t t)
 }
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+		__disable_irq();
 		Delay_ms(1);
 		// Check xung cạnh xuống lần đầu của trạng thái đếm lên
 		if(GPIO_Pin == CLK_Pin && checkturnedCW == false)
 		{
 			if(HAL_GPIO_ReadPin(DATA_GPIO_Port, DATA_Pin) == 1 && HAL_GPIO_ReadPin(CLK_GPIO_Port, CLK_Pin) == 0)
 				checkturnedCW = true;
-		}
-		// Check xung cạnh xuống lần đầu của trạng thái đếm xuống
-		if(GPIO_Pin ==  DATA_Pin  && checkturnedCCW == false)
-		{
-			if(HAL_GPIO_ReadPin(DATA_GPIO_Port, DATA_Pin) == 0 && HAL_GPIO_ReadPin(CLK_GPIO_Port, CLK_Pin) == 1)
-				checkturnedCCW = true;
 		}
 		// Sau khi check xung trạng thái đếm lên lần đầu thì tiếp tục check
 		if(GPIO_Pin == DATA_Pin && checkturnedCW == true)
@@ -92,7 +89,15 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			{
 				turnedCW = true;
 				checkturnedCW = false;
+
 			}
+		}
+
+		// Check xung cạnh xuống lần đầu của trạng thái đếm xuống
+		if(GPIO_Pin == DATA_Pin && checkturnedCCW == false)
+		{
+			if(HAL_GPIO_ReadPin(DATA_GPIO_Port, DATA_Pin) == 0 && HAL_GPIO_ReadPin(CLK_GPIO_Port, CLK_Pin) == 1)
+				checkturnedCCW = true;
 		}
 		// Sau khi check xung trạng thái đếm xuống lần đầu thì tiếp tục check
 		if(GPIO_Pin == CLK_Pin && checkturnedCCW == true)
@@ -101,8 +106,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			{
 				turnedCCW = true;
 				checkturnedCCW = false;
+
 			}
 		}
+		__enable_irq();
+
 }
 /* USER CODE END 0 */
 
@@ -120,7 +128,6 @@ int main(void)
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
@@ -262,7 +269,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : CLK_Pin DATA_Pin */
   GPIO_InitStruct.Pin = CLK_Pin|DATA_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/

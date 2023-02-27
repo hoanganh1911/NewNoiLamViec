@@ -63,8 +63,6 @@ void Error_Handler(void);
 #define LATCH_GPIO_Port GPIOA
 #define DATA_Pin GPIO_PIN_15
 #define DATA_GPIO_Port GPIOA
-#define M_RESET_Pin GPIO_PIN_3
-#define M_RESET_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

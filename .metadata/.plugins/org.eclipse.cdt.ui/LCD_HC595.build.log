@@ -1,12 +1,12 @@
-11:26:04 **** Incremental Build of configuration Debug for project LCD_HC595 ****
+13:42:07 **** Incremental Build of configuration Debug for project LCD_HC595 ****
 make -j8 all 
 arm-none-eabi-size   LCD_HC595.elf 
    text	   data	    bss	    dec	    hex	filename
-   8888	    120	   1672	  10680	   29b8	LCD_HC595.elf
+   8916	    120	   1696	  10732	   29ec	LCD_HC595.elf
 Finished building: default.size.stdout
  
 arm-none-eabi-objcopy -O ihex LCD_HC595.elf LCD_HC595.hex
  
 
-11:26:04 Build Finished. 0 errors, 0 warnings. (took 229ms)
+13:42:07 Build Finished. 0 errors, 0 warnings. (took 230ms)
 
