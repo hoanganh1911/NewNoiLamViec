@@ -66,6 +66,8 @@ volatile bool checkturnedCW = false;
 volatile bool turnedCCW = false;
 volatile bool checkturnedCCW = false;
 
+/* Bấm giữ nút nhất */
+volatile bool pressed_BTN_EN = false;
 /* Biến đếm */
 static int16_t screw_set_count = 0;
 
@@ -86,6 +88,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	__disable_irq();
 	Delay_ms(1);
 
+	// Xác định trạng thái đếm lên
 	if(GPIO_Pin == CLK_EN_Pin && checkturnedCW == false)
 	{
 		if(HAL_GPIO_ReadPin(DT_EN_GPIO_Port, DT_EN_Pin	) == 1 && HAL_GPIO_ReadPin(CLK_EN_GPIO_Port, CLK_EN_Pin) == 0)
@@ -100,7 +103,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		}
 	}
 
-
+	// Xác định trạng thái đễm xuống
 	if(GPIO_Pin == DT_EN_Pin && checkturnedCCW == false)
 	{
 		if(HAL_GPIO_ReadPin(DT_EN_GPIO_Port, DT_EN_Pin) == 0 && HAL_GPIO_ReadPin(CLK_EN_GPIO_Port, CLK_EN_Pin) == 1)
@@ -112,6 +115,22 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		{
 			turnedCCW = true;
 			checkturnedCCW = false;
+		}
+	}
+
+	if(GPIO_Pin == BTN_EN_Pin && pressed_BTN_EN == false)
+	{
+		if(HAL_GPIO_ReadPin(BTN_EN_GPIO_Port, BTN_EN_Pin) == 0)
+		{
+			int i = 0;
+			for(i = 0;i<200;i++)
+			{
+				if(HAL_GPIO_ReadPin(BTN_EN_GPIO_Port, BTN_EN_Pin) == 1)
+					break;
+				Delay_ms(1);
+			}
+			if(i==200)
+				pressed_BTN_EN = true;
 		}
 	}
 	__enable_irq();
@@ -188,6 +207,13 @@ int main(void)
 		else
 			screw_set_count = 0;
 		turnedCCW = false;
+	  }
+	  if(pressed_BTN_EN == true)
+	  {
+		  screw_set_count = 0;
+		  lcd_Clear();
+		  screw_Set_Show(screw_set_count);
+		  pressed_BTN_EN = false;
 	  }
 
   }
@@ -294,11 +320,17 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, Clock_Pin|Latch_Pin|Data_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : CLK_EN_Pin DT_EN_Pin */
-  GPIO_InitStruct.Pin = CLK_EN_Pin|DT_EN_Pin;
+  /*Configure GPIO pins : CLK_EN_Pin BTN_EN_Pin */
+  GPIO_InitStruct.Pin = CLK_EN_Pin|BTN_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : DT_EN_Pin */
+  GPIO_InitStruct.Pin = DT_EN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(DT_EN_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : Clock_Pin Latch_Pin Data_Pin */
   GPIO_InitStruct.Pin = Clock_Pin|Latch_Pin|Data_Pin;
@@ -313,6 +345,9 @@ static void MX_GPIO_Init(void)
 
   HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
 }
 

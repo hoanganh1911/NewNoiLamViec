@@ -1,0 +1,7 @@
+../User_Libs/pn532.c:13:6:pn532_spi_init	16	static
+../User_Libs/pn532.c:18:6:pn532_begin	8	static
+../User_Libs/pn532.c:28:6:pn532_sendCommandCheckAck	16	static
+../User_Libs/pn532.c:36:6:pn532_isready	16	static
+../User_Libs/pn532.c:47:6:pn532_writecommand	16	static
+../User_Libs/pn532.c:56:6:pn532_spi_write	16	static
+../User_Libs/pn532.c:62:9:pn532_spi_read	16	static

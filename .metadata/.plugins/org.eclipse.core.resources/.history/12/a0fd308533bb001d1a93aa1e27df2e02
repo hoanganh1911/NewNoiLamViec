@@ -1,0 +1,24 @@
+/*
+ * keypad_pcf.h
+ *
+ *  Created on: Mar 4, 2023
+ *      Author: hoanganh
+ */
+
+#ifndef KEYPAD_PCF_H_
+#define KEYPAD_PCF_H_
+/*----------------------------------------*/
+#include "stm32f1xx_hal.h"
+#include "stdio.h"
+/*----------------------------------------*/
+#define pcf_add 0x20
+
+I2C_HandleTypeDef _hi2c;
+
+uint8_t read(uint8_t mask);
+uint8_t getkey()
+{
+	uint8_t key = 0;
+	uint8_t rows = read(0xF0)
+}
+#endif /* KEYPAD_PCF_H_ */

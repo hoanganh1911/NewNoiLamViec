@@ -1,0 +1,2 @@
+../User_Libs/keypad_pcf.c:10:9:read	32	static
+../User_Libs/keypad_pcf.c:17:9:getkey	16	static

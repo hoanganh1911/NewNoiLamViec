@@ -63,6 +63,9 @@ void Error_Handler(void);
 #define DT_EN_Pin GPIO_PIN_4
 #define DT_EN_GPIO_Port GPIOA
 #define DT_EN_EXTI_IRQn EXTI4_IRQn
+#define BTN_EN_Pin GPIO_PIN_5
+#define BTN_EN_GPIO_Port GPIOA
+#define BTN_EN_EXTI_IRQn EXTI9_5_IRQn
 #define Clock_Pin GPIO_PIN_11
 #define Clock_GPIO_Port GPIOA
 #define Latch_Pin GPIO_PIN_12

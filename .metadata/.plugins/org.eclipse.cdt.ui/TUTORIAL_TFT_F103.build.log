@@ -1,0 +1,44 @@
+16:46:58 **** Incremental Build of configuration Debug for project TUTORIAL_TFT_F103 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/fonts.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/fonts.d" -MT"Src/fonts.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/fonts.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_hal_msp.d" -MT"Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Src/stm32f1xx_it.c:22:
+../Inc/main.h:31:10: fatal error: stm32f1xx_hal.h: No such file or directory
+   31 | #include "stm32f1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+arm-none-eabi-gcc "../Src/tft.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/tft.d" -MT"Src/tft.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/tft.o"
+In file included from ../Src/main.c:22:
+../Inc/main.h:31:10: fatal error: stm32f1xx_hal.h: No such file or directory
+   31 | #include "stm32f1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Src/stm32f1xx_hal_msp.c:23:
+../Inc/main.h:31:10: fatal error: stm32f1xx_hal.h: No such file or directory
+   31 | #include "stm32f1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:40: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:40: Src/stm32f1xx_hal_msp.o] Error 1
+../Src/system_stm32f1xx.c:59:10: fatal error: stm32f1xx.h: No such file or directory
+   59 | #include "stm32f1xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:40: Src/stm32f1xx_it.o] Error 1
+make: *** [Src/subdir.mk:40: Src/system_stm32f1xx.o] Error 1
+../Src/tft.c:40:10: fatal error: stm32f1xx_hal.h: No such file or directory
+   40 | #include "stm32f1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:40: Src/tft.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+16:46:58 Build Failed. 11 errors, 0 warnings. (took 281ms)
+
