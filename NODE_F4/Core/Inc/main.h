@@ -63,8 +63,6 @@ void Error_Handler(void);
 #define Relay_1_GPIO_Port GPIOA
 #define Relay_2_Pin GPIO_PIN_1
 #define Relay_2_GPIO_Port GPIOA
-#define RS485_DERE_Pin GPIO_PIN_4
-#define RS485_DERE_GPIO_Port GPIOA
 #define LORA_NSS_Pin GPIO_PIN_0
 #define LORA_NSS_GPIO_Port GPIOB
 #define W25Q_CS_Pin GPIO_PIN_1

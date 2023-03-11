@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="0x9327"/>
+		<item key="selection" value="pvParameters"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="pvParameters"/>
+			<item value="handle"/>
+			<item value="argument"/>
+			<item value="ModBus_Transmit"/>
+			<item value="HAL_UARTEx_ReceiveToIdle_DMA"/>
+			<item value="DMA_IT_HT"/>
+			<item value="keyChange"/>
+			<item value="w25_info"/>
+			<item value="_strkey"/>
+			<item value="interrupt"/>
+			<item value="interrupt&apos;"/>
 			<item value="0x9327"/>
 			<item value="OFFSET_9327"/>
 			<item value="SUPPORT_9488_555"/>
 			<item value="SUPPORT_9225"/>
-			<item value="9327"/>
-			<item value="printnewtstr"/>
-			<item value="tft_init"/>
-			<item value="p16"/>
-			<item value="tft_in"/>
-			<item value="Init"/>
-			<item value="init"/>
-			<item value="delay"/>
-			<item value="_width"/>
-			<item value="WIDTH"/>
-			<item value="define WRITE_DELAY { }"/>
 		</list>
 		<list key="replacehistory">
+			<item value="_w25q"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="839"/>
-		<item key="DIALOG_Y_ORIGIN" value="413"/>
+		<item key="DIALOG_X_ORIGIN" value="911"/>
+		<item key="DIALOG_Y_ORIGIN" value="424"/>
 		<item key="DIALOG_WIDTH" value="357"/>
 		<item key="DIALOG_HEIGHT" value="408"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>

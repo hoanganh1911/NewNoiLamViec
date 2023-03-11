@@ -23,6 +23,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "keypad_pcf.h"
+#include "W25Q.h"
+#include "stdlib.h"
 #include "stdbool.h"
 /* USER CODE END Includes */
 
@@ -47,8 +49,8 @@ SPI_HandleTypeDef hspi1;
 
 UART_HandleTypeDef huart2;
 
-osThreadId KeyMatrixTaskHandle;
-osThreadId tftTaskHandle;
+osThreadId KeyMatrix_TaskHandle;
+osThreadId TFT_TaskHandle;
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -59,8 +61,8 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_USART2_UART_Init(void);
-void StartKeyMatrixTask(void const * argument);
-void StarttftTask(void const * argument);
+void StartKeyMatrix_Task(void const * argument);
+void StartTFT_Task(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -68,17 +70,18 @@ void StarttftTask(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint8_t _lastkey;
+uint8_t _keypressed;
+char _strkey[9];
+uint8_t _numberofkey = 0;
+char _keys[]="123A456B789C*0#DN";
 volatile bool keyChange = false;
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	__disable_irq();
-//	if(GPIO_Pin == PCF_INT_Pin)
-//		keyChange = true;
-	xTaskResumeFromISR(KeyMatrixTaskHandle);
+	if(GPIO_Pin == PCF_INT_Pin)
+		keyChange = true;
 	__enable_irq();
-
 }
 /* USER CODE END 0 */
 
@@ -133,13 +136,13 @@ int main(void)
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* definition and creation of KeyMatrixTask */
-  osThreadDef(KeyMatrixTask, StartKeyMatrixTask, osPriorityNormal, 0, 128);
-  KeyMatrixTaskHandle = osThreadCreate(osThread(KeyMatrixTask), NULL);
+  /* definition and creation of KeyMatrix_Task */
+  osThreadDef(KeyMatrix_Task, StartKeyMatrix_Task, osPriorityNormal, 0, 128);
+  KeyMatrix_TaskHandle = osThreadCreate(osThread(KeyMatrix_Task), NULL);
 
-  /* definition and creation of tftTask */
-  osThreadDef(tftTask, StarttftTask, osPriorityNormal, 0, 128);
-  tftTaskHandle = osThreadCreate(osThread(tftTask), NULL);
+  /* definition and creation of TFT_Task */
+  osThreadDef(TFT_Task, StartTFT_Task, osPriorityAboveNormal, 0, 128);
+  TFT_TaskHandle = osThreadCreate(osThread(TFT_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -331,9 +334,8 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, Relay_1_Pin|Relay_2_Pin|RS485_DERE_Pin|TFT_DB3_Pin
-                          |TFT_DB2_Pin|TFT_DB1_Pin|TFT_DB0_Pin|TFT_LED_Pin
-                          |TFT_RST_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, Relay_1_Pin|Relay_2_Pin|TFT_DB3_Pin|TFT_DB2_Pin
+                          |TFT_DB1_Pin|TFT_DB0_Pin|TFT_LED_Pin|TFT_RST_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LORA_NSS_Pin|W25Q_CS_Pin|LORA_RST_Pin|TFT_DB7_Pin
@@ -347,15 +349,19 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(BUZZER_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Relay_1_Pin Relay_2_Pin RS485_DERE_Pin TFT_DB3_Pin
-                           TFT_DB2_Pin TFT_DB1_Pin TFT_DB0_Pin TFT_LED_Pin
-                           TFT_RST_Pin */
-  GPIO_InitStruct.Pin = Relay_1_Pin|Relay_2_Pin|RS485_DERE_Pin|TFT_DB3_Pin
-                          |TFT_DB2_Pin|TFT_DB1_Pin|TFT_DB0_Pin|TFT_LED_Pin
-                          |TFT_RST_Pin;
+  /*Configure GPIO pins : Relay_1_Pin Relay_2_Pin TFT_DB3_Pin TFT_DB2_Pin
+                           TFT_DB1_Pin TFT_DB0_Pin TFT_LED_Pin TFT_RST_Pin */
+  GPIO_InitStruct.Pin = Relay_1_Pin|Relay_2_Pin|TFT_DB3_Pin|TFT_DB2_Pin
+                          |TFT_DB1_Pin|TFT_DB0_Pin|TFT_LED_Pin|TFT_RST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA4 */
+  GPIO_InitStruct.Pin = GPIO_PIN_4;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LORA_NSS_Pin W25Q_CS_Pin LORA_RST_Pin TFT_DB7_Pin
@@ -394,48 +400,82 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE END 4 */
 
-/* USER CODE BEGIN Header_StartKeyMatrixTask */
+/* USER CODE BEGIN Header_StartKeyMatrix_Task */
 /**
-  * @brief  Function implementing the KeyMatrixTask thread.
+  * @brief  Function implementing the KeyMatrix_Task thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_StartKeyMatrixTask */
-void StartKeyMatrixTask(void const * argument)
+/* USER CODE END Header_StartKeyMatrix_Task */
+void StartKeyMatrix_Task(void const * argument)
 {
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
   {
-	vTaskSuspend(NULL);
-//	if(keyChange)
-//	{
-		_lastkey = getkey();
+
+	if(keyChange)
+	{
+		if(_numberofkey == 9)
+		{
+			_numberofkey = 0;
+			for(int i = 0;i<9;i++)
+				_strkey[i]='\0';
+		}
+		uint8_t key;
+		key = getkey();
+		if(key != 17 && key > 0)
+			_keypressed = key;
+		else
+		{
+			_strkey[_numberofkey]=_keys[_keypressed];
+			_numberofkey++;
+		}
 		keyChange = false;
-//	}
-    //osDelay(1);
+	}
+	osDelay(1);
   }
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StarttftTask */
+/* USER CODE BEGIN Header_StartTFT_Task */
 /**
-* @brief Function implementing the tftTask thread.
+* @brief Function implementing the TFT_Task thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StarttftTask */
-void StarttftTask(void const * argument)
+/* USER CODE END Header_StartTFT_Task */
+void StartTFT_Task(void const * argument)
 {
-  /* USER CODE BEGIN StarttftTask */
+  /* USER CODE BEGIN StartTFT_Task */
   /* Infinite loop */
   for(;;)
   {
 	HAL_GPIO_TogglePin(BUZZER_GPIO_Port, BUZZER_Pin);
-	HAL_Delay(500);
-    osDelay(1);
+	osDelay(200);
   }
-  /* USER CODE END StarttftTask */
+  /* USER CODE END StartTFT_Task */
+}
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM2 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM2) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
 }
 
 /**

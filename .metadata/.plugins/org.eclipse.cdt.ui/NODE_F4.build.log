@@ -1,17 +1,10 @@
-16:28:26 **** Incremental Build of configuration Debug for project NODE_F4 ****
+19:20:44 **** Incremental Build of configuration Debug for project NODE_F4 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../User_Libs -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "NODE_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/NODE_F4/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NODE_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NODE_F4.elf
- 
 arm-none-eabi-size   NODE_F4.elf 
-arm-none-eabi-objdump -h -S  NODE_F4.elf  > "NODE_F4.list"
    text	   data	    bss	    dec	    hex	filename
-  19260	     24	  18120	  37404	   921c	NODE_F4.elf
+  20536	    144	  18304	  38984	   9848	NODE_F4.elf
 Finished building: default.size.stdout
  
-Finished building: NODE_F4.list
- 
 
-16:28:26 Build Finished. 0 errors, 0 warnings. (took 486ms)
+19:20:44 Build Finished. 0 errors, 0 warnings. (took 172ms)
 

@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../User_Libs/W25Q.c \
 ../User_Libs/keypad_pcf.c 
 
 OBJS += \
+./User_Libs/W25Q.o \
 ./User_Libs/keypad_pcf.o 
 
 C_DEPS += \
+./User_Libs/W25Q.d \
 ./User_Libs/keypad_pcf.d 
 
 
@@ -21,7 +24,7 @@ User_Libs/%.o User_Libs/%.su: ../User_Libs/%.c User_Libs/subdir.mk
 clean: clean-User_Libs
 
 clean-User_Libs:
-	-$(RM) ./User_Libs/keypad_pcf.d ./User_Libs/keypad_pcf.o ./User_Libs/keypad_pcf.su
+	-$(RM) ./User_Libs/W25Q.d ./User_Libs/W25Q.o ./User_Libs/W25Q.su ./User_Libs/keypad_pcf.d ./User_Libs/keypad_pcf.o ./User_Libs/keypad_pcf.su
 
 .PHONY: clean-User_Libs
 
