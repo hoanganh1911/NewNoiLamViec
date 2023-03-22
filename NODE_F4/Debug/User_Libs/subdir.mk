@@ -5,16 +5,25 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../User_Libs/W25Q.c \
-../User_Libs/keypad_pcf.c 
+../User_Libs/DS3231.c \
+../User_Libs/Keypad.c \
+../User_Libs/Lora.c \
+../User_Libs/TFT.c \
+../User_Libs/W25Q.c 
 
 OBJS += \
-./User_Libs/W25Q.o \
-./User_Libs/keypad_pcf.o 
+./User_Libs/DS3231.o \
+./User_Libs/Keypad.o \
+./User_Libs/Lora.o \
+./User_Libs/TFT.o \
+./User_Libs/W25Q.o 
 
 C_DEPS += \
-./User_Libs/W25Q.d \
-./User_Libs/keypad_pcf.d 
+./User_Libs/DS3231.d \
+./User_Libs/Keypad.d \
+./User_Libs/Lora.d \
+./User_Libs/TFT.d \
+./User_Libs/W25Q.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -24,7 +33,7 @@ User_Libs/%.o User_Libs/%.su: ../User_Libs/%.c User_Libs/subdir.mk
 clean: clean-User_Libs
 
 clean-User_Libs:
-	-$(RM) ./User_Libs/W25Q.d ./User_Libs/W25Q.o ./User_Libs/W25Q.su ./User_Libs/keypad_pcf.d ./User_Libs/keypad_pcf.o ./User_Libs/keypad_pcf.su
+	-$(RM) ./User_Libs/DS3231.d ./User_Libs/DS3231.o ./User_Libs/DS3231.su ./User_Libs/Keypad.d ./User_Libs/Keypad.o ./User_Libs/Keypad.su ./User_Libs/Lora.d ./User_Libs/Lora.o ./User_Libs/Lora.su ./User_Libs/TFT.d ./User_Libs/TFT.o ./User_Libs/TFT.su ./User_Libs/W25Q.d ./User_Libs/W25Q.o ./User_Libs/W25Q.su
 
 .PHONY: clean-User_Libs
 

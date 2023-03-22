@@ -2,4 +2,10 @@
 <section name="Workbench">
 	<section name="NewWizardAction">
 	</section>
+	<section name="PreferencesImportWizard">
+		<item key="" value="/home/hoanganh/STM32Cube/EditColor.epf"/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/home/hoanganh/STM32Cube/EditColor.epf"/>
+		</list>
+	</section>
 </section>

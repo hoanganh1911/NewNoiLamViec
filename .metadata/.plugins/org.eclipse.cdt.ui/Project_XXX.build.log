@@ -1,10 +1,50 @@
-11:27:00 **** Incremental Build of configuration Debug for project Project_XXX ****
+17:13:21 **** Build of configuration Debug for project Project_XXX ****
 make -j8 all 
-arm-none-eabi-size   Project_XXX.elf 
-   text	   data	    bss	    dec	    hex	filename
-  42792	    492	  10708	  53992	   d2e8	Project_XXX.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../User_Libs/pn532.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../User_Libs -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"User_Libs/pn532.d" -MT"User_Libs/pn532.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "User_Libs/pn532.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../User_Libs -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../User_Libs/pn532.c: In function 'pn532_sendCommandCheckAck':
+../User_Libs/pn532.c:31:6: warning: implicit declaration of function 'pn532_waitready'; did you mean 'pn532_isready'? [-Wimplicit-function-declaration]
+   31 |  if(!pn532_waitready(timeout))
+      |      ^~~~~~~~~~~~~~~
+      |      pn532_isready
+../User_Libs/pn532.c: In function 'pn532_isready':
+../User_Libs/pn532.c:41:10: warning: unused variable 'x' [-Wunused-variable]
+   41 |  uint8_t x = pn532_spi_read();
+      |          ^
+../User_Libs/pn532.c: In function 'pn532_writecommand':
+../User_Libs/pn532.c:55:5: error: too few arguments to function 'pn532_spi_write'
+   55 |     pn532_spi_write(PN532_SPI_DATAWRITE);
+      |     ^~~~~~~~~~~~~~~
+In file included from ../User_Libs/pn532.c:8:
+../User_Libs/pn532.h:50:6: note: declared here
+   50 | void pn532_spi_write(uint8_t c);
+      |      ^~~~~~~~~~~~~~~
+../User_Libs/pn532.c:49:10: warning: unused variable 'checksum' [-Wunused-variable]
+   49 |  uint8_t checksum;
+      |          ^~~~~~~~
+../User_Libs/pn532.c: In function 'pn532_spi_write':
+../User_Libs/pn532.c:62:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   62 |  HAL_SPI_Transmit(&(hpn532->_hspi),(uint8_t*)c, 1, 1000);
+      |                                    ^
+../User_Libs/pn532.c: In function 'pn532_spi_read':
+../User_Libs/pn532.c:69:35: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   69 |  HAL_SPI_Receive(&(hpn532->_hspi),(uint8_t*)x, 1, 1000);
+      |                                   ^
+../User_Libs/pn532.c: In function 'pn532_sendCommandCheckAck':
+../User_Libs/pn532.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+   35 | }
+      | ^
+../User_Libs/pn532.c: In function 'pn532_isready':
+../User_Libs/pn532.c:43:1: warning: control reaches end of non-void function [-Wreturn-type]
+   43 | }
+      | ^
+In file included from ../Core/Src/main.c:26:
+../User_Libs/pn532.h:26:16: warning: 'pn532_packetbuffer' defined but not used [-Wunused-variable]
+   26 | static uint8_t pn532_packetbuffer[PN532_PACKBUFFSIZE];
+      |                ^~~~~~~~~~~~~~~~~~
+make: *** [User_Libs/subdir.mk:19: User_Libs/pn532.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
 
-11:27:00 Build Finished. 0 errors, 0 warnings. (took 173ms)
+17:13:21 Build Failed. 3 errors, 8 warnings. (took 432ms)
 

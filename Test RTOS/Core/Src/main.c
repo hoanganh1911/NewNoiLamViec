@@ -66,6 +66,7 @@ void StartNormalTask(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+uint8_t Rx_data;
 
 /* USER CODE END 0 */
 
@@ -99,7 +100,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_UART_Receive_IT(&huart1, &Rx_data, 1);
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -116,7 +117,7 @@ int main(void)
 
   /* Create the queue(s) */
   /* definition and creation of SimpleQueue */
-  osMessageQDef(SimpleQueue, 5, int);
+  osMessageQDef(SimpleQueue, 50, int);
   SimpleQueueHandle = osMessageCreate(osMessageQ(SimpleQueue), NULL);
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -140,11 +141,11 @@ int main(void)
 
   /* definition and creation of ReceiverTask */
   osThreadDef(ReceiverTask, StartReceiverTask, osPriorityLow, 0, 128);
-  ReceiverTaskHandle = osThreadCreate(osThread(ReceiverTask), (void*) 111);
+  ReceiverTaskHandle = osThreadCreate(osThread(ReceiverTask), NULL);
 
   /* definition and creation of NormalTask */
   osThreadDef(NormalTask, StartNormalTask, osPriorityNormal, 0, 128);
-  NormalTaskHandle = osThreadCreate(osThread(NormalTask), NULL);
+  NormalTaskHandle = osThreadCreate(osThread(NormalTask), (void*) 111);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -185,7 +186,12 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLN = 100;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -195,12 +201,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
   {
     Error_Handler();
   }
@@ -254,7 +260,30 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	HAL_UART_Receive_IT(huart, &Rx_data, 1);
+	int ToSend = 123456789;
+	if (Rx_data == 'r')
+	{
+		 /* The xHigherPriorityTaskWoken parameter must be initialized to pdFALSE as
+		 it will get set to pdTRUE inside the interrupt safe API function if a
+		 context switch is required. */
+		BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
+		if (xQueueSendToFrontFromISR(SimpleQueueHandle, &ToSend, &xHigherPriorityTaskWoken) == pdPASS)
+		{
+			HAL_UART_Transmit(huart, (uint8_t *)"\n\nSent from ISR\n\n", 17, 500);
+		}
+		/* Pass the xHigherPriorityTaskWoken value into portEND_SWITCHING_ISR(). If
+		 xHigherPriorityTaskWoken was set to pdTRUE inside xSemaphoreGiveFromISR()
+		 then calling portEND_SWITCHING_ISR() will request a context switch. If
+		 xHigherPriorityTaskWoken is still pdFALSE then calling
+		 portEND_SWITCHING_ISR() will have no effect */
+
+		portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);
+	}
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartHighTask */
@@ -281,6 +310,7 @@ void StartHighTask(void const * argument)
 	char *str2 = "Ra khoi Task High\n\n";
 	HAL_UART_Transmit(&huart1, (uint8_t *)str2, strlen(str2), HAL_MAX_DELAY);
     osDelay(2000);
+
   }
   /* USER CODE END 5 */
 }
@@ -340,7 +370,7 @@ void StartNormalTask(void const * argument)
 	i = (int) argument;
 	char *str = "Vao Task Normal\n";
 	HAL_UART_Transmit(&huart1, (uint8_t *)str, strlen(str), HAL_MAX_DELAY);
-	if(osMessagePut(SimpleQueueHandle,(uint32_t)i,portMAX_DELAY) == osOK)
+	if(osMessagePut(SimpleQueueHandle,(uint32_t)i,osWaitForever) == osOK)
 	{
 		char *str1 = "Gui thanh cong so 111 vao Queue\n";
 		HAL_UART_Transmit(&huart1, (uint8_t *)str1, strlen(str1), HAL_MAX_DELAY);

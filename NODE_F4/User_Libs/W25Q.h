@@ -55,14 +55,12 @@ typedef struct
 	uint8_t   			StatusRegister3;
 } w25q_t;
 /*----------------------------------------*/
-
-
-
-
-
-
-
-
-
+void W25_Init(w25q_t* _w25q);
+void W25_Reset(w25q_t* _w25q);
+void W25_Read_Data(w25q_t* _w25q, uint32_t addr, uint8_t* dt, uint32_t sz);
+uint64_t W25_Read_ID(w25q_t* _w25q);
+void W25_Read_Page(w25q_t* _w25q, uint8_t* dt, uint32_t page_addr, uint32_t offset, uint32_t sz);
+uint32_t W25_Read_Jedec_ID(w25q_t* _w25q);
+void W25_Info(w25q_t* _w25q);
 
 #endif /* W25Q_H_ */

@@ -22,10 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "keypad_pcf.h"
-#include "W25Q.h"
-#include "stdlib.h"
-#include "stdbool.h"
+#include "TFT.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,6 +44,8 @@ I2C_HandleTypeDef hi2c1;
 
 SPI_HandleTypeDef hspi1;
 
+TIM_HandleTypeDef htim3;
+
 UART_HandleTypeDef huart2;
 
 osThreadId KeyMatrix_TaskHandle;
@@ -61,6 +60,7 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_USART2_UART_Init(void);
+static void MX_TIM3_Init(void);
 void StartKeyMatrix_Task(void const * argument);
 void StartTFT_Task(void const * argument);
 
@@ -70,19 +70,7 @@ void StartTFT_Task(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint8_t _keypressed;
-char _strkey[9];
-uint8_t _numberofkey = 0;
-char _keys[]="123A456B789C*0#DN";
-volatile bool keyChange = false;
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-	__disable_irq();
-	if(GPIO_Pin == PCF_INT_Pin)
-		keyChange = true;
-	__enable_irq();
-}
 /* USER CODE END 0 */
 
 /**
@@ -116,7 +104,9 @@ int main(void)
   MX_I2C1_Init();
   MX_SPI1_Init();
   MX_USART2_UART_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+  TFT_init();
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -283,6 +273,51 @@ static void MX_SPI1_Init(void)
 }
 
 /**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 71;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 65535;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
   * @brief USART2 Initialization Function
   * @param None
   * @retval None
@@ -331,7 +366,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, Relay_1_Pin|Relay_2_Pin|TFT_DB3_Pin|TFT_DB2_Pin
@@ -413,27 +448,7 @@ void StartKeyMatrix_Task(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-
-	if(keyChange)
-	{
-		if(_numberofkey == 9)
-		{
-			_numberofkey = 0;
-			for(int i = 0;i<9;i++)
-				_strkey[i]='\0';
-		}
-		uint8_t key;
-		key = getkey();
-		if(key != 17 && key > 0)
-			_keypressed = key;
-		else
-		{
-			_strkey[_numberofkey]=_keys[_keypressed];
-			_numberofkey++;
-		}
-		keyChange = false;
-	}
-	osDelay(1);
+	  osDelay(1);
   }
   /* USER CODE END 5 */
 }
@@ -451,8 +466,8 @@ void StartTFT_Task(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	HAL_GPIO_TogglePin(BUZZER_GPIO_Port, BUZZER_Pin);
-	osDelay(200);
+	  osDelay(1);
+
   }
   /* USER CODE END StartTFT_Task */
 }

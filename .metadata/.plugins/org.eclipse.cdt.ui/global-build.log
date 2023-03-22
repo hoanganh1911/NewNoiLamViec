@@ -1,270 +1,972 @@
-11:32:04 **** Incremental Build of configuration Debug for project Test RTOS ****
+17:51:16 **** Incremental Build of configuration Debug for project NODE_F4 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
+arm-none-eabi-size   NODE_F4.elf 
    text	   data	    bss	    dec	    hex	filename
-  23032	    124	  18140	  41296	   a150	Test RTOS.elf
+  24660	    124	  18364	  43148	   a88c	NODE_F4.elf
 Finished building: default.size.stdout
  
-Finished building: Test RTOS.list
- 
-11:32:07 **** Incremental Build of configuration Debug for project Test RTOS ****
+17:51:20 **** Incremental Build of configuration Debug for project NODE_F4 ****
 make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
+arm-none-eabi-size   NODE_F4.elf 
    text	   data	    bss	    dec	    hex	filename
-  23032	    124	  18140	  41296	   a150	Test RTOS.elf
+  24660	    124	  18364	  43148	   a88c	NODE_F4.elf
 Finished building: default.size.stdout
  
-11:33:24 **** Incremental Build of configuration Debug for project Test RTOS ****
+18:05:36 **** Incremental Build of configuration Debug for project NODE_F4 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-11:35:13 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-11:35:39 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-11:39:22 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-11:39:36 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-12:01:29 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-12:02:04 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-12:04:38 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-12:05:00 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-12:09:03 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  22992	    124	  18140	  41256	   a128	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-12:12:23 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  22496	    124	  18140	  40760	   9f38	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-12:14:10 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  22992	    124	  18140	  41256	   a128	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-12:14:57 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22992	    124	  18140	  41256	   a128	Test RTOS.elf
-Finished building: default.size.stdout
- 
-12:18:24 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-12:18:35 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-12:24:35 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-12:26:26 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-12:29:05 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23040	    124	  18140	  41304	   a158	Test RTOS.elf
-Finished building: default.size.stdout
- 
-12:30:01 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
- 
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
-   text	   data	    bss	    dec	    hex	filename
-  23056	    124	  18140	  41320	   a168	Test RTOS.elf
-Finished building: default.size.stdout
- 
-Finished building: Test RTOS.list
- 
-12:53:28 **** Incremental Build of configuration Debug for project Test RTOS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'StartReceiverTask':
-../Core/Src/main.c:300:19: warning: implicit declaration of function 'osMescsageGet'; did you mean 'osMessageGet'? [-Wimplicit-function-declaration]
-  300 |   osEvent event = osMescsageGet(SimpleQueueHandle, osWaitForever);
-      |                   ^~~~~~~~~~~~~
-      |                   osMessageGet
-../Core/Src/main.c:300:19: error: invalid initializer
-make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+arm-none-eabi-gcc "../User_Libs/TFT.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../User_Libs -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"User_Libs/TFT.d" -MT"User_Libs/TFT.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User_Libs/TFT.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../User_Libs -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../User_Libs/TFT.c:8:
+../User_Libs/TFT.c: In function 'readReg':
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:133:5: note: in expansion of macro 'WriteCmd'
+  133 |     WriteCmd(reg);
+      |     ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:133:5: note: in expansion of macro 'WriteCmd'
+  133 |     WriteCmd(reg);
+      |     ^~~~~~~~
+../User_Libs/TFT.c: In function 'TFT_init':
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:162:2: note: in expansion of macro 'WriteCmd'
+  162 |  WriteCmd(0x01) //Soft Reset
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:162:2: note: in expansion of macro 'WriteCmd'
+  162 |  WriteCmd(0x01) //Soft Reset
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:164:2: note: in expansion of macro 'WriteCmd'
+  164 |  WriteCmd(0x28); //Display Off
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:164:2: note: in expansion of macro 'WriteCmd'
+  164 |  WriteCmd(0x28); //Display Off
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:166:2: note: in expansion of macro 'WriteCmd'
+  166 |  WriteCmd(0x3A); //Pixel read=565, write=565.
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:166:2: note: in expansion of macro 'WriteCmd'
+  166 |  WriteCmd(0x3A); //Pixel read=565, write=565.
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:167:2: note: in expansion of macro 'WriteData'
+  167 |  WriteData(0x55);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:167:2: note: in expansion of macro 'WriteData'
+  167 |  WriteData(0x55);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:169:2: note: in expansion of macro 'WriteCmd'
+  169 |  WriteCmd(0xB0); // Disable Protect for cmds B1-DF, E0-EF, F0-FF
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:169:2: note: in expansion of macro 'WriteCmd'
+  169 |  WriteCmd(0xB0); // Disable Protect for cmds B1-DF, E0-EF, F0-FF
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:170:2: note: in expansion of macro 'WriteData'
+  170 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:170:2: note: in expansion of macro 'WriteData'
+  170 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:172:2: note: in expansion of macro 'WriteCmd'
+  172 |  WriteCmd(0xC1); // Display Timing [10 10 02 02]
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:172:2: note: in expansion of macro 'WriteCmd'
+  172 |  WriteCmd(0xC1); // Display Timing [10 10 02 02]
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:173:2: note: in expansion of macro 'WriteData'
+  173 |  WriteData(0x10);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:173:2: note: in expansion of macro 'WriteData'
+  173 |  WriteData(0x10);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:174:2: note: in expansion of macro 'WriteData'
+  174 |  WriteData(0x10);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:174:2: note: in expansion of macro 'WriteData'
+  174 |  WriteData(0x10);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:175:2: note: in expansion of macro 'WriteData'
+  175 |  WriteData(0x02);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:175:2: note: in expansion of macro 'WriteData'
+  175 |  WriteData(0x02);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:176:2: note: in expansion of macro 'WriteData'
+  176 |  WriteData(0x02);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:176:2: note: in expansion of macro 'WriteData'
+  176 |  WriteData(0x02);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:178:2: note: in expansion of macro 'WriteCmd'
+  178 |  WriteCmd(0xC0); // Panel Drive [00 35 00 00 01 02 REV=0,GS=0,SS=0
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:178:2: note: in expansion of macro 'WriteCmd'
+  178 |  WriteCmd(0xC0); // Panel Drive [00 35 00 00 01 02 REV=0,GS=0,SS=0
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:179:2: note: in expansion of macro 'WriteData'
+  179 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:179:2: note: in expansion of macro 'WriteData'
+  179 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:180:2: note: in expansion of macro 'WriteData'
+  180 |  WriteData(0x35);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:180:2: note: in expansion of macro 'WriteData'
+  180 |  WriteData(0x35);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:181:2: note: in expansion of macro 'WriteData'
+  181 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:181:2: note: in expansion of macro 'WriteData'
+  181 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:182:2: note: in expansion of macro 'WriteData'
+  182 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:182:2: note: in expansion of macro 'WriteData'
+  182 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:183:2: note: in expansion of macro 'WriteData'
+  183 |  WriteData(0x01);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:183:2: note: in expansion of macro 'WriteData'
+  183 |  WriteData(0x01);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:184:2: note: in expansion of macro 'WriteData'
+  184 |  WriteData(0x02);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:184:2: note: in expansion of macro 'WriteData'
+  184 |  WriteData(0x02);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:186:2: note: in expansion of macro 'WriteCmd'
+  186 |  WriteCmd(0xC5); // Frame Rate [04]
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:186:2: note: in expansion of macro 'WriteCmd'
+  186 |  WriteCmd(0xC5); // Frame Rate [04]
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:187:2: note: in expansion of macro 'WriteData'
+  187 |  WriteData(0x04);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:187:2: note: in expansion of macro 'WriteData'
+  187 |  WriteData(0x04);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:189:2: note: in expansion of macro 'WriteCmd'
+  189 |  WriteCmd(0xD2); // Power Setting [01 44]
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:189:2: note: in expansion of macro 'WriteCmd'
+  189 |  WriteCmd(0xD2); // Power Setting [01 44]
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:190:2: note: in expansion of macro 'WriteData'
+  190 |  WriteData(0x01);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:190:2: note: in expansion of macro 'WriteData'
+  190 |  WriteData(0x01);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:191:2: note: in expansion of macro 'WriteData'
+  191 |  WriteData(0x04);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:191:2: note: in expansion of macro 'WriteData'
+  191 |  WriteData(0x04);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:193:2: note: in expansion of macro 'WriteCmd'
+  193 |  WriteCmd(0xCA); // DGC LUT ???
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:193:2: note: in expansion of macro 'WriteCmd'
+  193 |  WriteCmd(0xCA); // DGC LUT ???
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:194:2: note: in expansion of macro 'WriteData'
+  194 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:194:2: note: in expansion of macro 'WriteData'
+  194 |  WriteData(0x00);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:196:2: note: in expansion of macro 'WriteCmd'
+  196 |  WriteCmd(0xEA);
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:196:2: note: in expansion of macro 'WriteCmd'
+  196 |  WriteCmd(0xEA);
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:197:2: note: in expansion of macro 'WriteData'
+  197 |  WriteData(0x80);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:74:25: note: in expansion of macro 'write16'
+   74 | #define WriteData(x)  { write16(x); }
+      |                         ^~~~~~~
+../User_Libs/TFT.c:197:2: note: in expansion of macro 'WriteData'
+  197 |  WriteData(0x80);
+      |  ^~~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:199:2: note: in expansion of macro 'WriteCmd'
+  199 |  WriteCmd(0x11);
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:199:2: note: in expansion of macro 'WriteCmd'
+  199 |  WriteCmd(0x11);
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:53: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                     ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:201:2: note: in expansion of macro 'WriteCmd'
+  201 |  WriteCmd(0x29);
+      |  ^~~~~~~~
+../User_Libs/TFT.h:56:16: error: invalid suffix "F80" on integer constant
+   56 |  GPIOA->BSRR = 4F80 << 16;                                   \
+      |                ^~~~
+../User_Libs/TFT.c:67:26: note: in expansion of macro 'write_8'
+   67 | #define write8(x)      { write_8(x); WRITE_DELAY; WR_STROBE; WR_IDLE; }
+      |                          ^~~~~~~
+../User_Libs/TFT.c:68:64: note: in expansion of macro 'write8'
+   68 | #define write16(x)     { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
+      |                                                                ^~~~~~
+../User_Libs/TFT.c:73:37: note: in expansion of macro 'write16'
+   73 | #define WriteCmd(x)   { CD_COMMAND; write16(x); CD_DATA; }
+      |                                     ^~~~~~~
+../User_Libs/TFT.c:201:2: note: in expansion of macro 'WriteCmd'
+  201 |  WriteCmd(0x29);
+      |  ^~~~~~~~
+../User_Libs/TFT.c:160:11: warning: unused variable 'read' [-Wunused-variable]
+  160 |  uint32_t read = ReadID();
+      |           ^~~~
+make: *** [User_Libs/subdir.mk:31: User_Libs/TFT.o] Error 1
+make: *** Waiting for unfinished jobs....
 "make -j8 all" terminated with exit code 2. Build might be incomplete.
-12:53:43 **** Incremental Build of configuration Debug for project Test RTOS ****
+18:05:52 **** Incremental Build of configuration Debug for project NODE_F4 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
+arm-none-eabi-gcc "../User_Libs/TFT.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../User_Libs -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"User_Libs/TFT.d" -MT"User_Libs/TFT.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User_Libs/TFT.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../User_Libs -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User_Libs/TFT.c: In function 'TFT_init':
+../User_Libs/TFT.c:160:11: warning: unused variable 'read' [-Wunused-variable]
+  160 |  uint32_t read = ReadID();
+      |           ^~~~
+arm-none-eabi-gcc -o "NODE_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/NODE_F4/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NODE_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NODE_F4.elf
  
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
+arm-none-eabi-size   NODE_F4.elf 
+arm-none-eabi-objdump -h -S  NODE_F4.elf  > "NODE_F4.list"
    text	   data	    bss	    dec	    hex	filename
-  23056	    124	  18140	  41320	   a168	Test RTOS.elf
+  24660	    124	  18364	  43148	   a88c	NODE_F4.elf
 Finished building: default.size.stdout
  
-Finished building: Test RTOS.list
+Finished building: NODE_F4.list
  
-12:56:25 **** Incremental Build of configuration Debug for project Test RTOS ****
+18:08:02 **** Incremental Build of configuration Debug for project NODE_F4 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Test RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/Test RTOS/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Test RTOS.elf
+arm-none-eabi-gcc "../User_Libs/TFT.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../User_Libs -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"User_Libs/TFT.d" -MT"User_Libs/TFT.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User_Libs/TFT.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../User_Libs -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User_Libs/TFT.c: In function 'TFT_init':
+../User_Libs/TFT.c:160:11: warning: unused variable 'read' [-Wunused-variable]
+  160 |  uint32_t read = ReadID();
+      |           ^~~~
+arm-none-eabi-gcc -o "NODE_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/hoanganh/STM32CubeIDE/NoiLamViec/NODE_F4/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NODE_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NODE_F4.elf
  
-arm-none-eabi-size   Test\ RTOS.elf 
-arm-none-eabi-objdump -h -S  Test\ RTOS.elf  > "Test RTOS.list"
+arm-none-eabi-size   NODE_F4.elf 
+arm-none-eabi-objdump -h -S  NODE_F4.elf  > "NODE_F4.list"
    text	   data	    bss	    dec	    hex	filename
-  23056	    124	  18140	  41320	   a168	Test RTOS.elf
+  24660	    124	  18364	  43148	   a88c	NODE_F4.elf
 Finished building: default.size.stdout
  
-Finished building: Test RTOS.list
+Finished building: NODE_F4.list
  
-12:56:40 **** Incremental Build of configuration Debug for project Test RTOS ****
+18:08:17 **** Incremental Build of configuration Debug for project NODE_F4 ****
 make -j8 all 
-arm-none-eabi-size   Test\ RTOS.elf 
+arm-none-eabi-size   NODE_F4.elf 
    text	   data	    bss	    dec	    hex	filename
-  23056	    124	  18140	  41320	   a168	Test RTOS.elf
+  24660	    124	  18364	  43148	   a88c	NODE_F4.elf
 Finished building: default.size.stdout
  

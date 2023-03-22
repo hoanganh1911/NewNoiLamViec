@@ -10,11 +10,11 @@
 uint8_t buf[256];
 /*----------------------------------------*/
 // Pin CS SPI W25Qxx
-void CS_Set(w25q_t* _w25q)
+static void CS_Set(w25q_t* _w25q)
 {
 	HAL_GPIO_WritePin(_w25q->CS_port,_w25q->CS_Pin, GPIO_PIN_RESET);
 }
-void CS_Reset(w25q_t* _w25q)
+static void CS_Reset(w25q_t* _w25q)
 {
 	HAL_GPIO_WritePin(_w25q->CS_port, _w25q->CS_Pin, GPIO_PIN_SET);
 }
@@ -73,7 +73,7 @@ uint64_t W25_Read_ID(w25q_t* _w25q)
 	}
 	return received_id;
 }
-// Read data by Page
+// Read page by page
 void W25_Read_Page(w25q_t* _w25q, uint8_t* dt, uint32_t page_addr, uint32_t offset, uint32_t sz)
 {
 	// Just read one page and this is a condition

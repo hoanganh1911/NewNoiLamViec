@@ -1,10 +1,10 @@
-19:20:44 **** Incremental Build of configuration Debug for project NODE_F4 ****
+18:08:17 **** Incremental Build of configuration Debug for project NODE_F4 ****
 make -j8 all 
 arm-none-eabi-size   NODE_F4.elf 
    text	   data	    bss	    dec	    hex	filename
-  20536	    144	  18304	  38984	   9848	NODE_F4.elf
+  24660	    124	  18364	  43148	   a88c	NODE_F4.elf
 Finished building: default.size.stdout
  
 
-19:20:44 Build Finished. 0 errors, 0 warnings. (took 172ms)
+18:08:17 Build Finished. 0 errors, 0 warnings. (took 227ms)
 

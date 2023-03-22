@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/hoanganh/Downloads/Gateway_Plus"/>
 			<item value="/home/hoanganh/Project_KiCad/DuAn_AnhDan/ThaiDan_TransmissionBoard"/>
 			<item value="/home/hoanganh/Downloads/TFT_F103.zip"/>
 			<item value="/home/hoanganh/Downloads/TFT_F103"/>
@@ -23,5 +24,13 @@
 		<item key="DIALOG_WIDTH" value="563"/>
 		<item key="DIALOG_HEIGHT" value="447"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="556"/>
+		<item key="DIALOG_Y_ORIGIN" value="273"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
 	</section>
 </section>
